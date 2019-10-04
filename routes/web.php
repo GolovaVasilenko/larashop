@@ -7,6 +7,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('user/index', 'Shop\User\MainController@index')->name('profile');
 
 /* Admin panel */
 Route::group(['middleware' => ['status', 'auth']], function() {
@@ -16,6 +17,8 @@ Route::group(['middleware' => ['status', 'auth']], function() {
     ];
 
     Route::group($groupData, function() {
-        Route::resource('index', 'MainController');
+        Route::resource('index', 'MainController')
+            ->names('shop.admin.index');
+
     });
 });
