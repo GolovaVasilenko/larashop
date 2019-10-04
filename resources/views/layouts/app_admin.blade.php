@@ -5,7 +5,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="shortcut icon" href="" type="image/png" />
-    <title></title>
+    <title>{!! MetaTag::tag('title') !!}</title>
 	<!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.7 -->
@@ -196,7 +196,7 @@
     <div class="content-wrapper">
 
         <main id="app">
-            {{--@include('blog.admin.components.result_messages')--}}
+            @include('shop.admin.components.flash_messages')
             @yield('content')
         </main>
     </div>

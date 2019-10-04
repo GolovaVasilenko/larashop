@@ -1,4 +1,4 @@
-<h2>@isset($title) {{ $title }} @endisset
+@isset($title) <h2>{{ $title }}</h2> @endisset
 
     <ol class="breadcrumb">
         <li><a href="{{ 'shop.admin.index.index' }}"><i class="fa fa-dashboard"></i>{{ $parent }}</a></li>

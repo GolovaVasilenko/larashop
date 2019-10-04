@@ -1,5 +1,7 @@
 <?php
 
+use Fomvasss\LaravelMetaTags\Facade;
+
 return [
 
     /*
@@ -176,6 +178,7 @@ return [
         App\Providers\RouteServiceProvider::class,
 
         App\Providers\ComposerServiceProvider::class,
+        //Torann\LaravelMetaTags\MetaTagsServiceProvider::class,
     ],
 
     /*
@@ -226,6 +229,8 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+
+        'MetaTag'   => Fomvasss\LaravelMetaTags\Facade::class,
 
     ],
 
