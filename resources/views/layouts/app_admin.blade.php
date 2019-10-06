@@ -19,9 +19,9 @@
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="{{asset('adminlte/dist/css/skins/_all-skins.min.css')}}">
+    <link rel="stylesheet" href="{{asset('adminlte/bower_components/datatables.net/css/datatables.css')}}"/>
 
     <link rel="stylesheet" href="{{asset('css/my.css')}}">
-
     <!-- Google Font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 
@@ -112,10 +112,7 @@
                 <!-- Optionally, you can add icons to the links -->
                 <li><a href="/"><i class="fa fa-home"></i> <span>В магазин</span></a></li>
                 <li><a href=""><i class="fa fa-user"></i> <span>Главная админки</span></a></li>
-                <li><a href=""><i class="fa fa-shopping-cart"></i> <span>Заказы</span></a></li>
-
-
-
+                <li><a href="{{ route('shop.admin.orders.index') }}"><i class="fa fa-shopping-cart"></i> <span>Заказы</span></a></li>
                 <li class="treeview">
                     <a href="#"><i class="fa fa-navicon"></i> <span>Категории</span>
                         <span class="pull-right-container">
@@ -185,8 +182,6 @@
                 </div>
             </form>
 
-
-
             <!-- /.search form -->
         </section>
         <!-- /.sidebar -->
@@ -212,26 +207,24 @@
 </div>
 <!-- ./wrapper -->
 
-
-
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
-
+<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.js"></script>
 <script>
     var pathd = '{{PATH}}';
 </script>
-<!-- jQuery 3 -->
-<script src="{{asset('adminlte/bower_components/jquery/dist/jquery.min.js')}}"></script>
+
 
 <!-- Bootstrap 3.3.7 -->
 <script src="{{asset('adminlte/bower_components/bootstrap/dist/js/bootstrap.min.js')}}"></script>
 <!-- Validator -->
 <script src="{{asset('js/validator.js')}}"></script>
 <!-- Search -->
+<script src="{{asset('adminlte/bower_components/datatables.net/js/jquery.dataTables.js')}}"></script>
 
 <!-- AdminLTE App -->
 <script src="{{asset('adminlte/dist/js/adminlte.min.js')}}"></script>
-
+<script src="{{asset('adminlte/dist/js/custom.js')}}"></script>
 <!-- === = ===  -->
-
+@yield('js'))
 </body>
 </html>

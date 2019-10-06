@@ -178,6 +178,7 @@ return [
         App\Providers\RouteServiceProvider::class,
 
         App\Providers\ComposerServiceProvider::class,
+        Yajra\Datatables\DatatablesServiceProvider::class,
         //Torann\LaravelMetaTags\MetaTagsServiceProvider::class,
     ],
 
@@ -231,6 +232,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
         'MetaTag'   => Fomvasss\LaravelMetaTags\Facade::class,
+        'Datatables' => Yajra\Datatables\Facades\Datatables::class,
 
     ],
 

@@ -20,5 +20,9 @@ Route::group(['middleware' => ['status', 'auth']], function() {
         Route::resource('index', 'MainController')
             ->names('shop.admin.index');
 
+        Route::resource('orders', 'OrderController')
+            ->names('shop.admin.orders');
+        Route::post('orders/ajaxData', 'OrderController@ajaxData')
+            ->name('shop.admin.orders.ajax');
     });
 });
